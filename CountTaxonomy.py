@@ -32,7 +32,7 @@ def count_taxonomy(input_file, output_file):
         i = 0
         target = [count_dict]
         while i < len(taxonomy):
-            tax = taxonomy[i].strip("\n")
+            tax = taxonomy[i].strip("\n").strip()
             if tax not in target[0].keys():
                 target[0][tax] = dict()
                 target = [target[0][tax]]
